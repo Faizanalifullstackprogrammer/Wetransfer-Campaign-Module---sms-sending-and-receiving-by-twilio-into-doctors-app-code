@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <meta charset="utf-8" Content-type='text/html'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+    <title>Tableau de bord - SMS</title>
+  <link href="https://www.teletick.fr/webassets/img/logos/favicon.ico" rel="shortcut icon" />
+    <link href="https://www.teletick.fr/portalassets/specialistassets/css/loader.css" rel="stylesheet" type="text/css" />
+    <script src="https://www.teletick.fr/portalassets/js/loader.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,800&display=swap" rel="stylesheet"><!-- // -->
+    <link href="https://www.teletick.fr/portalassets/specialistassets/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://www.teletick.fr/portalassets/specialistassets/css/plugins.css" rel="stylesheet" type="text/css" />
+    <link href="https://www.teletick.fr/portalassets/specialistassets/plugins/apex/apexcharts.css" rel="stylesheet" type="text/css">
+    <link href="https://www.teletick.fr/portalassets/specialistassets/css/dashboard/dash_1.css" rel="stylesheet" type="text/css" />
+    <link href="https://www.teletick.fr/portalassets/specialistassets/plugins/table/datatable/datatables.css" rel="stylesheet" type="text/css">
+    <link href="https://www.teletick.fr/portalassets/specialistassets/css/forms/theme-checkbox-radio.css" rel="stylesheet" type="text/css">
+    <link href="https://www.teletick.fr/portalassets/specialistassets/plugins/table/datatable/dt-global_style.css" rel="stylesheet" type="text/css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" /><!-- // -->
+    <link href="https://www.teletick.fr/portalassets/plugins/toastr/toastr.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://www.teletick.fr/portalassets/specialistassets/css/users/account-setting.css" rel="stylesheet" type="text/css" />
+    <link href="https://www.teletick.fr/portalassets/specialistassets/plugins/dropify/dropify.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://www.teletick.fr/portalassets/specialistassets/plugins/flatpickr/flatpickr.css" rel="stylesheet" type="text/css" />
+    <link href="https://www.teletick.fr/portalassets/specialistassets/plugins/flatpickr/custom-flatpickr.css" rel="stylesheet" type="text/css" />  
+    <link href="https://www.teletick.fr/portalassets/specialistassets/plugins/noUiSlider/nouislider.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://www.teletick.fr/portalassets/specialistassets/plugins/noUiSlider/custom-nouiSlider.css" rel="stylesheet" type="text/css" />
+    <link href="https://www.teletick.fr/portalassets/specialistassets/css/forms/switches.css" rel="stylesheet" type="text/css" />
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css" rel="stylesheet" />
+    <link href="https://www.teletick.fr/portalassets/specialistassets/css/tables/table-basic.css" rel="stylesheet" type="text/css" />
+
+    <link href="https://www.teletick.fr/portalassets/specialistassets/css/dashboard/dash_2.css" rel="stylesheet" type="text/css" />
+    <link href="https://www.teletick.fr/portalassets/specialistassets/css/apps/mailing-chat.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="deco/formSms.css">            
+    <link href="https://www.teletick.fr/portalassets/css/forms/switches.css" rel="stylesheet" type="text/css" />
+    <script src="https://www.teletick.fr/portalassets/js/libs/jquery-3.1.1.min.js"></script>
+    <script src="https://www.teletick.fr/portalassets/js/libs/jquery.validate.min.js"></script>
+    <script src="https://www.teletick.fr/portalassets/specialistassets/plugins/table/datatable/datatables.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://www.teletick.fr/portalassets/plugins/select2/select2.min.css">
+    <script src="https://www.teletick.fr/portalassets/plugins/select2/select2.min.js"></script>
+    <script src="https://www.teletick.fr/portalassets/plugins/select2/custom-select2.js"></script>
+
+
+    <script>
+        var base_url = "https://www.teletick.fr/";
+        var site_lang = 'french';
+        var csrf_hash = "e13c4258b6c0688ab1c98c7ead7547fc";
+        var searchPlaceholder = "Rechercher";
+        var dataTableResults = "Résultats";
+        var dataTableinfo = "Afficher la page _PAGE_ de _PAGES_";
+        var dataTableFilterInfo = "filtré de _MAX_ entrées totales";
+    </script>
+    <style>
+
+    .update_btn{
+        color: #fff !important;
+        background-color: #65904b!important;
+        border-color: #e4e5e8;
+    }
+
+
+        .error { color: red !important; }
+        
+       .notification-span{
+font-weight: normal!important;
+
+}
+        .navbar .navbar-item .nav-item.dropdown.notification-dropdown .dropdown-menu .media-body .notification-para{
+         font-weight: normal!important;   
+        }
+        
+        .navbar .navbar-item .nav-item.dropdown.notification-dropdown .nav-link span.badge{
+          position: absolute;
+    top: 6px;
+    right: -15px;
+    width: 21px;
+    height: 20px;
+    border-radius: 50%;
+    padding: 1px 0px 0px;
+    font-size: 10px;
+    color: #fff!important;
+    background: #A7D08E;
+    display: block;
+        }
+
+.button-btn{
+background: #4e54c8;
+background: linear-gradient(
+90deg
+, #A7D08E 0%, #537E36 100%);
+border-radius: 30px;
+cursor: pointer;
+font-weight: 500;
+color: #fff;
+letter-spacing: 1px;
+font-size: 14px;
+line-height: 21px;
+padding: 8px 25px;
+border-radius: 30px;
+text-transform: uppercase;
+display: inline-block;
+vertical-align: middle;
+-webkit-transform: perspective(1px) translateZ(0);
+transform: perspective(1px) translateZ(0);
+position: relative;
+-webkit-transition: all linear 400ms;
+transition: all linear 400ms;
+border: none;
+}
+.button-btn h3{
+    color:#FFF;
+    font-size:14px;
+    }
+
+</style>
+    
+</head>
+
+<body>
+
+
+  <div class="header-container fixed-top custom-pl-0">
+    <header class="header navbar navbar-expand-sm">
+        <a href="javascript:void(0);" class="sidebarCollapse" data-placement="bottom"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg></a>
+                                                    <ul class="navbar-item flex-row">
+                <a href="#">
+                    <li class="nav-item align-self-center page-heading">
+                        <div class="page-header">
+                            <div class="page-title">
+                              <!--   <h3>Home</h3> -->
+                            </div>
+                        </div>
+                    </li>
+                </a>
+            </ul>
+        
+        <ul class="navbar-item flex-row search-ul"></ul>
+        <ul class="navbar-item flex-row navbar-dropdown">
+                           
+                    
+                                       
+            <li class="nav-item dropdown notification-dropdown">
+                <a href="javascript:void(0);" class="nav-link dropdown-toggle" id="notificationDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <img src="https://www.teletick.fr/portalassets/img/bell1.png" class="notification_icon" alt="notification">
+                         <h5 style="font-size: 10px;color:white;padding-top:3px;"></h5>
+                            
+                        </span> 
+                    </span>
+                </a>
+                <div class="dropdown-menu position-absolute" aria-labelledby="notificationDropdown">
+                    <div class="notification-scroll">
+                        
+                       </div>
+                </div>
+            </li>
+      
+      
+            <li class="nav-item dropdown language-dropdown more-dropdown">
+                <div class="dropdown custom-dropdown-icon">
+                    <a class="dropdown-toggle btn custom-border-0" href="#" role="button" id="customDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="https://www.teletick.fr/portalassets/img/fr.png" class="flag-width" alt="flag"><span>Français</span> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg></a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="customDropdown">
+                        <a class="dropdown-item" data-img-value="fr" data-value="French" href="https://www.teletick.fr/languageswitcher/webchange/french"><img src="https://www.teletick.fr/portalassets/img/fr.png" class="flag-width" alt="flag">
+      Français                                </a>
+                        <a class="dropdown-item" data-img-value="ca" data-value="English" href="https://www.teletick.fr/languageswitcher/webchange/english"><img src="https://www.teletick.fr/portalassets/img/ca.png" class="flag-width" alt="flag">  Anglais</a>
+                    </div>
+                </div>
+            </li>
+                                 <li class="nav-item dropdown user-profile-dropdown  order-lg-0 order-1">
+                <a href="javascript:void(0);" class="nav-link dropdown-toggle user" id="userProfileDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img class="avatar-icon" src="https://www.teletick.fr/uploadimages/default.jpg" alt=""> <span class="login-user-name"> Test Hello </span>
+                </a>
+                <div class="dropdown-menu position-absolute" aria-labelledby="userProfileDropdown">
+                    <div class="dropdown-item">
+                                                        <a class="" href="https://www.teletick.fr/specialist/profile"><i class="fa fa-user fa-lg dash_icon" aria-hidden="true"></i>&nbsp;&nbsp;Voir le profil</a>
+                    </div>
+                                                    <div class="dropdown-item">
+                            <a href="https://www.teletick.fr/login/logout"><i class="fa fa-sign-out fa-lg" aria-hidden="true"></i><img src="https://www.teletick.fr/portalassets/img/logout.png" class="dash_icon" alt="">&nbsp;&nbsp;Se déconnecter</a>
+                        </div>
+                                            </div>
+            </li>
+        </ul>
+      </header>
+      </div>
+
+<div class="main-container main-content-bg" id="container">
+    <div class="overlay"></div>
+    <div class="search-overlay">
+</div>
+
+<style>
+#sidebar ul.menu-categories li.menu.active svg path{
+    fill:white;
+}
+body{
+    font-family: "Poppins"!important;
+}
+</style>
+
+        <div class="sidebar-wrapper sidebar-theme">
+        <nav id="sidebar">
+            <ul class="navbar-nav theme-brand flex-row text-center">
+                <li class="nav-item theme-logo">
+                    <a href="https://www.teletick.fr/">
+                        <img src="https://www.teletick.fr/portalassets/img/logo/logo.png" class="navbar-logo" alt="logo">
+                    </a>
+                </li>
+
+                <li class="nav-item toggle-sidebar">
+                    <div class="custom-collapse-div">
+                        <i class="fa fa-bars sidebarCollapse bar-icon" aria-hidden="true"></i>
+                    </div>
+                </li>
+            </ul>
+            <ul class="list-unstyled menu-categories" id="accordionExample">
+
+    <li class="menu active">
+        <a href="https://www.teletick.fr/dashboard" aria-expanded="true" class="dropdown-toggle">
+            <div class="">
+<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0)">
+<path d="M1.41667 15.5827V3.54102H0V16.291C0 16.4789 0.0746278 16.659 0.207466 16.7919C0.340304 16.9247 0.520472 16.9993 0.708333 16.9993H17V15.5827H1.41667Z" fill="#A7D08E"/>
+<path d="M6.37467 9.91732C6.37467 9.72946 6.30005 9.54929 6.16721 9.41645C6.03437 9.28361 5.8542 9.20898 5.66634 9.20898H3.54134C3.35348 9.20898 3.17331 9.28361 3.04047 9.41645C2.90764 9.54929 2.83301 9.72946 2.83301 9.91732V14.8757H6.37467V9.91732Z" fill="#A7D08E"/>
+<path d="M11.3336 7.08333C11.3336 6.89547 11.259 6.7153 11.1262 6.58247C10.9933 6.44963 10.8132 6.375 10.6253 6.375H8.50032C8.31246 6.375 8.1323 6.44963 7.99946 6.58247C7.86662 6.7153 7.79199 6.89547 7.79199 7.08333V14.875H11.3336V7.08333Z" fill="#A7D08E"/>
+<path d="M16.2917 4.24935C16.2917 4.06149 16.217 3.88132 16.0842 3.74848C15.9514 3.61564 15.7712 3.54102 15.5833 3.54102H13.4583C13.2705 3.54102 13.0903 3.61564 12.9575 3.74848C12.8246 3.88132 12.75 4.06149 12.75 4.24935V14.8743H16.2917V4.24935Z" fill="#A7D08E"/>
+</g>
+<defs>
+<clipPath id="clip0">
+<rect width="17" height="17" fill="#A7D08E"/>
+</clipPath>
+</defs>
+</svg>
+
+
+                <span>Statistiques</span>
+            </div>
+        </a>
+    </li>
+
+                    <li class="menu">
+                        <a href="https://www.teletick.fr/specialist/calendar" aria-expanded="true" class="dropdown-toggle">
+
+            <div class="menu">
+               
+            <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.19225 8.82765C6.19225 8.62722 6.01952 8.46484 5.80639 8.46484H4.45987C4.24699 8.46484 4.07422 8.62722 4.07422 8.82765V10.0948C4.07422 10.2955 4.24699 10.4579 4.45987 10.4579H5.80639C6.01952 10.4579 6.19225 10.2955 6.19225 10.0948V8.82765Z" fill="#A7D08E"/>
+<path d="M9.55729 8.82765C9.55729 8.62722 9.38452 8.46484 9.1718 8.46484H7.82511C7.61222 8.46484 7.43945 8.62722 7.43945 8.82765V10.0948C7.43945 10.2955 7.61222 10.4579 7.82511 10.4579H9.1718C9.38452 10.4579 9.55729 10.2955 9.55729 10.0948V8.82765Z" fill="#A7D08E"/>
+<path d="M12.9227 8.82765C12.9227 8.62722 12.75 8.46484 12.5371 8.46484H11.1906C10.9774 8.46484 10.8047 8.62722 10.8047 8.82765V10.0948C10.8047 10.2955 10.9774 10.4579 11.1906 10.4579H12.5371C12.75 10.4579 12.9227 10.2955 12.9227 10.0948V8.82765Z" fill="#A7D08E"/>
+<path d="M6.19225 11.9948C6.19225 11.7941 6.01952 11.6318 5.80639 11.6318H4.45987C4.24699 11.6318 4.07422 11.7941 4.07422 11.9948V13.2618C4.07422 13.4623 4.24699 13.6247 4.45987 13.6247H5.80639C6.01952 13.6247 6.19225 13.4623 6.19225 13.2618V11.9948Z" fill="#A7D08E"/>
+<path d="M9.55729 11.9948C9.55729 11.7941 9.38452 11.6318 9.1718 11.6318H7.82511C7.61222 11.6318 7.43945 11.7941 7.43945 11.9948V13.2618C7.43945 13.4623 7.61222 13.6247 7.82511 13.6247H9.1718C9.38452 13.6247 9.55729 13.4623 9.55729 13.2618V11.9948Z" fill="#A7D08E"/>
+<path d="M12.9227 11.9948C12.9227 11.7941 12.75 11.6318 12.5372 11.6318H11.1906C10.9774 11.6318 10.8047 11.7941 10.8047 11.9948V13.2618C10.8047 13.4623 10.9774 13.6247 11.1906 13.6247H12.5372C12.75 13.6247 12.9227 13.4623 12.9227 13.2618V11.9948Z" fill="#A7D08E"/>
+<path d="M15.331 1.78136V3.71683C15.331 4.59163 14.577 5.2966 13.6476 5.2966H12.5857C11.6563 5.2966 10.8923 4.59163 10.8923 3.71683V1.77441H6.10587V3.71683C6.10587 4.59163 5.34188 5.2966 4.4126 5.2966H3.35047C2.42115 5.2966 1.66715 4.59163 1.66715 3.71683V1.78136C0.854925 1.8044 0.1875 2.43696 0.1875 3.21446V14.5572C0.1875 15.3493 0.869656 15.9999 1.71128 15.9999H15.2868C16.1272 15.9999 16.8106 15.348 16.8106 14.5572V3.21446C16.8106 2.43696 16.1432 1.8044 15.331 1.78136ZM14.8378 13.8508C14.8378 14.1932 14.5429 14.4709 14.179 14.4709H2.79009C2.42624 14.4709 2.13134 14.1932 2.13134 13.8508V7.99192C2.13134 7.64947 2.4262 7.37175 2.79009 7.37175H14.179C14.5428 7.37175 14.8377 7.64947 14.8377 7.99192L14.8378 13.8508Z" fill="#A7D08E"/>
+<path d="M3.34686 4.25917H4.39726C4.71609 4.25917 4.97459 4.01622 4.97459 3.71615V0.543208C4.97459 0.243105 4.71609 0 4.39726 0H3.34686C3.028 0 2.76953 0.243105 2.76953 0.543208V3.71615C2.76953 4.01622 3.028 4.25917 3.34686 4.25917Z" fill="#A7D08E"/>
+<path d="M12.5714 4.25917H13.6218C13.9405 4.25917 14.199 4.01622 14.199 3.71615V0.543208C14.199 0.243105 13.9405 0 13.6218 0H12.5714C12.2526 0 11.9941 0.243105 11.9941 0.543208V3.71615C11.9941 4.01622 12.2526 4.25917 12.5714 4.25917Z" fill="#A7D08E"/>
+</svg>
+
+                <span style="margin-left: -3px;"><img src="https://www.teletick.fr/portalassets/img/calendar_dash.png" class="dash_icon" alt=""> Calendrier</span>
+            </div>
+        </a>
+    </li> 
+    
+                     <li class="menu">
+                        <a href="https://www.teletick.fr/specialist/appointment" aria-expanded="true" class="dropdown-toggle">
+            <div class="">
+            <svg width="17" height="11" viewBox="0 0 17 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.9755 0.423828H1.18056C0.528791 0.424597 0.000768589 0.952619 0 1.60438V9.3733C0.000768589 10.0251 0.528791 10.5531 1.18056 10.5539H10.9755C11.6271 10.5531 12.1553 10.0251 12.156 9.3733V1.60438C12.1553 0.952619 11.6271 0.424597 10.9755 0.423828Z" fill="#A7D08E"/>
+<path d="M12.9434 7.10512L17.0003 9.32005V1.68164L12.9434 3.89657V7.10512Z" fill="#A7D08E"/>
+</svg>
+
+                <span> Rendez-vous</span>
+            </div>
+        </a>
+    </li>
+
+
+     <li class="menu ">
+            <a href="https://www.teletick.fr/specialist/notifications" aria-expanded="false" class="dropdown-toggle">
+                <div class="">
+                <svg width="15" height="17" viewBox="0 0 15 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.55079 1.62391V1.05754C8.55659 0.479009 8.09214 0.00548801 7.5138 4.72979e-05C6.93527 -0.00539341 6.46211 0.459241 6.45703 1.03777V1.05754V1.62391C7.14945 1.50113 7.85819 1.50113 8.55079 1.62391Z" fill="#A7D08E"/>
+<path d="M7.50453 17.0004C8.58324 17.0008 9.48222 16.1745 9.57253 15.0996H5.43652C5.52684 16.1745 6.42582 17.0008 7.50453 17.0004Z" fill="#A7D08E"/>
+<path d="M12.8546 10.5028C12.866 10.5021 12.8772 10.5003 12.8883 10.4977V7.6421C12.8883 4.63104 10.4757 2.18164 7.50275 2.18164C4.52995 2.18164 2.11719 4.63104 2.11719 7.6421V10.4977C2.12825 10.5003 2.13949 10.5021 2.15092 10.5028H12.8546Z" fill="#A7D08E"/>
+<path d="M2.14002 11.1533H12.8665C13.5199 11.1533 14.0495 11.6831 14.0495 12.3363V13.2668C14.0495 13.9201 13.5199 14.4497 12.8665 14.4497H2.14002C1.48659 14.4497 0.957031 13.9201 0.957031 13.2668V12.3363C0.957031 11.6831 1.48659 11.1533 2.14002 11.1533Z" fill="#A7D08E"/>
+</svg>
+
+
+                 <span>Notifications</span>
+             </div>
+         </a>
+     </li>
+
+
+    <li class="menu  ">
+      <a href="https://www.teletick.fr/specialist/consultations" aria-expanded="false" class="dropdown-toggle">
+        <div class="">
+        <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.0341 10.12C14.5767 9.20044 12.908 8.69593 11.1836 8.60156C11.5823 8.7882 11.9769 8.98528 12.3511 9.22141C13.2528 9.78949 13.8131 10.8183 13.8131 11.9057V14.9375H17.0006V11.9057C17.0006 11.1804 16.6302 10.4961 16.0341 10.12Z" fill="#A7D08E"/>
+<path d="M11.7835 10.1202C8.55345 8.08234 4.19605 8.08234 0.967032 10.1202C0.370431 10.4958 0 11.1801 0 11.9059V14.9378H12.75V11.9059C12.75 11.1801 12.3796 10.4958 11.7835 10.1202Z" fill="#A7D08E"/>
+<path d="M9.55664 7.32403C9.9001 7.42799 10.2545 7.50004 10.6253 7.50004C12.6756 7.50004 14.3441 5.83159 14.3441 3.78129C14.3441 1.73099 12.6756 0.0625 10.6253 0.0625C10.2545 0.0625 9.9001 0.134548 9.55664 0.238516C10.5311 1.11437 11.1565 2.37079 11.1565 3.78126C11.1565 5.19172 10.5312 6.44814 9.55664 7.32403Z" fill="#A7D08E"/>
+<path d="M9.00457 1.1517C10.4568 2.60397 10.4568 4.95852 9.00457 6.4108C7.55229 7.86308 5.19774 7.86308 3.74546 6.4108C2.29318 4.95852 2.29318 2.60397 3.74546 1.1517C5.19774 -0.300582 7.55229 -0.300549 9.00457 1.1517Z" fill="#A7D08E"/>
+</svg>
+
+          <span> Consultations </span>
+        </div>
+      </a>
+    </li>
+
+    <li class="menu ">
+            <a href="https://www.teletick.fr/specialist/invoice" aria-expanded="false" class="dropdown-toggle">
+                <div class="">
+                    <svg width="13" height="17" viewBox="0 0 13 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12.5464 0.436759C12.2879 0.317694 11.9834 0.364026 11.7721 0.554498L10.6568 1.54202C10.6264 1.56902 10.5806 1.56886 10.5505 1.5417L9.03296 0.184444C8.75851 -0.0614814 8.343 -0.0614814 8.06855 0.184444L6.55241 1.54045C6.52191 1.56769 6.47582 1.56769 6.44532 1.54045L4.92902 0.184444C4.65456 -0.0614412 4.23906 -0.0614412 3.96461 0.184444L2.4469 1.5417C2.41652 1.56886 2.37063 1.56898 2.34009 1.54198L1.22378 0.554498C0.927629 0.291132 0.474033 0.317694 0.210668 0.613849C0.0925676 0.746657 0.0279519 0.918564 0.0293181 1.09626V15.9038C0.026666 16.3007 0.346289 16.6246 0.743225 16.6273C0.921039 16.6285 1.09295 16.5637 1.22579 16.4455L2.3411 15.458C2.37144 15.431 2.41721 15.4312 2.44738 15.4583L3.96489 16.8156C4.23934 17.0615 4.65485 17.0615 4.9293 16.8156L6.4456 15.4596C6.4761 15.4323 6.52219 15.4323 6.55269 15.4596L8.06899 16.8156C8.34349 17.0614 8.75895 17.0614 9.0334 16.8156L10.5512 15.4583C10.5816 15.4311 10.6275 15.431 10.658 15.458L11.7743 16.4455C12.0706 16.7087 12.5241 16.682 12.7874 16.3857C12.9053 16.253 12.9698 16.0813 12.9685 15.9038V1.09626C12.9723 0.811795 12.8063 0.552408 12.5464 0.436759ZM2.68977 5.76752H6.69153C6.86906 5.76752 7.013 5.91145 7.013 6.08899C7.013 6.26652 6.86906 6.41046 6.69153 6.41046H2.68977C2.51224 6.41046 2.3683 6.26652 2.3683 6.08899C2.3683 5.91145 2.51224 5.76752 2.68977 5.76752ZM10.3081 11.2325H2.68977C2.51224 11.2325 2.3683 11.0886 2.3683 10.9111C2.3683 10.7335 2.51224 10.5896 2.68977 10.5896H10.3081C10.4856 10.5896 10.6295 10.7335 10.6295 10.9111C10.6295 11.0886 10.4856 11.2325 10.3081 11.2325ZM10.3081 8.82149H2.68977C2.51224 8.82149 2.3683 8.67755 2.3683 8.50002C2.3683 8.32249 2.51224 8.17855 2.68977 8.17855H10.3081C10.4856 8.17855 10.6295 8.32249 10.6295 8.50002C10.6295 8.67755 10.4856 8.82149 10.3081 8.82149Z" fill="#A7D08E"/>
+</svg> 
+
+                 <span>Factures</span>
+             </div>
+         </a>
+     </li>
+
+
+     <li class="menu menu2 nav-item dropdown-toggle">
+        
+
+             
+  <a href="index-CampagnSms.html" >       
+    <?xml version="1.0" encoding="utf-8"?>
+    <svg class="imgsiz0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
+    <metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata>
+    <g><g transform="translate(0.000000,511.000000) scale(0.100000,-0.100000)"><path d="M619.1,4680.3c-212.7-67.5-366-198.4-451.9-386.5L107.8,4167l-6.1-4006.1c-4.1-4355.8-10.2-4139,106.3-4323.1c67.5-106.3,184-204.5,319-267.9l112.5-53.2h2208.6h2208.6l96.1,45c145.2,65.4,288.3,210.6,355.8,359.9l59.3,126.8l6.1,905.9l6.2,908l-42.9-14.3c-24.6-8.2-85.9-32.7-135-53.2l-90-40.9l-4.1-167.7c-2-92-2-231.1,2.1-306.7c4.1-77.7,0-190.2-8.2-251.5l-12.3-110.4l-2447.9,4.1l-2447.9,6.1L388,318.3l-4.1,3388.5h2466.3h2468.3l-14.3-120.6c-8.2-67.5-6.1-126.8,4.1-132.9c10.2-6.1,71.6,6.1,139.1,26.6l120.6,38.9l-2,323.1c-2.1,310.8-4.1,331.3-59.3,451.9c-65.4,149.3-208.6,292.4-353.8,359.9l-96.1,45l-2177.9,4.1C1163.1,4704.8,684.5,4700.8,619.1,4680.3z M3523,4310.2c28.6-26.6,51.1-71.6,51.1-98.2c0-57.3-65.4-132.9-128.8-147.2c-24.5-6.1-314.9-10.2-644.2-6.1l-601.2,6.1l-38.8,49.1c-53.2,65.4-49.1,137,12.3,196.3l49.1,51.1h625.8h625.8L3523,4310.2z M3036.3-3397.4c247.4-116.5,321.1-441.7,145.2-654.4c-202.4-247.4-580.8-206.5-721.9,75.7C2271.4-3597.8,2649.7-3217.4,3036.3-3397.4z M6150.8,3367.4c-550.1-79.8-1063.4-272-1492.8-558.3c-190.2-126.8-501-413.1-629.9-580.8c-390.6-507.2-562.4-1147.2-466.2-1732.1c100.2-591,362-1024.5,926.4-1527.6l65.4-57.3l-143.2-357.9c-286.3-717.8-288.3-726-255.6-805.7c32.7-75.7,85.9-114.5,159.5-114.5c26.6,0,409,155.4,850.7,345.6l801.6,345.6l190.2-30.7c237.2-40.9,832.3-45,1098.2-8.2c106.3,14.3,317,57.3,468.3,96.1C8848.1-1332,9653.8-577.3,9864.5,383.8c47.1,216.8,47.1,678.9,2.1,883.4C9615,2377.6,8608.8,3191.5,7257.1,3369.5C6985.1,3406.3,6408.4,3404.2,6150.8,3367.4z M5492.3,1764.2c128.8-40.9,137-57.3,87.9-227c-55.2-196.3-77.7-216.8-180-177.9c-180,71.6-355.8,63.4-411-20.4c-26.6-38.9-24.5-47,22.5-90c28.6-26.6,132.9-77.7,233.1-116.6c351.7-137,496.9-380.4,413.1-685.1c-28.6-106.3-180-263.8-310.8-321.1c-94.1-42.9-137-49.1-362-49.1c-194.3,0-282.2,8.2-362,36.8c-153.4,53.2-157.4,65.4-110.4,249.5c22.5,87.9,49.1,167.7,61.3,180c14.3,14.3,63.4,6.1,155.4-22.5c177.9-59.3,382.4-61.4,439.7-4.1c22.5,22.5,40.9,49.1,40.9,59.3c0,51.1-94.1,122.7-229,175.9c-190.2,73.6-274,126.8-368.1,231.1c-222.9,247.4-114.5,631.9,220.9,773C4987.2,1821.4,5289.8,1825.5,5492.3,1764.2z M8627.2,1796.9c147.2-16.4,263.8-69.5,263.8-120.7c0-65.4-65.4-288.3-92-319c-22.5-22.5-42.9-22.5-135,8.2c-196.3,65.4-407,40.9-407-49.1c0-55.2,53.2-94.1,243.4-173.8c296.5-124.7,406.9-231.1,451.9-429.4c63.4-284.3-135-562.4-445.8-627.8c-233.1-47-703.5,16.4-736.2,100.2c-16.4,42.9,55.2,325.2,87.9,351.7c22.5,18.4,57.3,14.3,153.4-18.4c155.4-53.2,378.3-59.3,433.5-8.2c51.1,45,47,120.6-8.2,157.5c-26.6,16.4-126.8,63.4-222.9,104.3c-302.7,124.7-427.4,276.1-427.4,507.2c0,65.4,12.3,147.2,28.6,186.1c42.9,102.2,151.3,214.7,263.8,269.9c98.2,51.1,300.6,90,402.9,77.7C8510.7,1809.1,8576.1,1803,8627.2,1796.9z M6453.4,1758c22.5-26.6,135-394.7,214.7-701.4l47-188.1l98.2,331.3c53.2,180,116.6,384.5,141.1,451.9l45,122.7l263.8,6.1c145.2,2.1,272-2,282.2-12.3c22.5-22.5,110.4-1599.2,92-1646.2c-10.2-28.6-45-34.8-216.8-34.8c-120.6,0-208.6,8.2-216.8,22.5c-8.2,10.2-22.5,210.6-32.7,441.7c-10.2,231.1-20.4,423.3-24.5,427.4c-2.1,4.1-63.4-182-135-411s-139.1-425.4-151.3-437.6c-12.3-12.3-94.1-22.5-182-22.5c-128.8,0-161.5,6.1-175.9,36.8c-12.3,18.4-69.5,214.7-128.8,433.5l-110.4,398.8l-20.4-419.2c-10.2-231.1-28.6-431.5-36.8-443.8c-26.6-40.9-400.8-36.8-415.1,4.1c-14.3,34.8,85.9,1617.6,104.3,1646.2C5915.6,1794.8,6426.8,1790.7,6453.4,1758z"fill="#A7D08E"/></g></g>
+    </svg>
+    
+                    <span class="blanc">Campagne SMS</span>
+        </a>   
+                    
+        <ul class="menu menu2">   
+        
+                <li class="nav-item drop0">
+                    <a href="sms-tableaudbor.html">
+                        <img class="imgsiz" src="img/tableau-de-bord.png" class="" alt="logo">
+                        <span>Tableau de Bord</span>
+                    </a>
+                </li>                        
+          
+                <li class="drop0 nav-item">
+                    <a href="sms-send.html">
+                        <img class="imgsiz" src="img/writmsg.png" class="" alt="logo">
+                        <span>Envoie Message</span>
+                    </a>
+                </li>        
+
+                <li class="nav-item drop0">
+                    <a href="sms-msgplanifés.html">
+                        <img class="imgsiz" src="img/env.png" class="" alt="logo">
+                        <span>Message Planifié</span>
+                    </a>
+                </li>                       
+         
+                <li class="nav-item drop0">
+                    <a href="sms-template.html">
+                        <img class="imgsiz" src="img/dove.png" class="" alt="logo">
+                        <span>Modèles Message</span>
+                    </a>
+                </li>                       
+           
+                <li class="nav-item drop0">
+                    <a href="sms-gestcontacts.html">
+                        <img class="imgsiz" src="img/contact.png" class="" alt="logo">
+                        <span>Gérer Contact</span>
+                    </a>
+                </li>                       
+            
+                <li class="nav-item drop0">
+                    <a href="sms-addcontacts.html">
+                        <img class="imgsiz" src="img/main.png" class="" alt="logo">
+                        <span>Ajouter Contact</span>
+                    </a>
+                </li>                       
+           
+                <li class="nav-item drop0">
+                    <a href="sms-importcontacts.html">
+                        <img class="imgsiz" src="img/importcont.png" class="" alt="logo">
+                        <span>Import Contact</span>
+                    </a>
+                </li>                       
+            
+                <li class="nav-item drop0">
+                    <a href="sms-gestgrp.html">
+                        <img class="imgsiz" src="img/addgrp.png" class="" alt="logo">
+                        <span>Gérer Groupe</span>
+                    </a>
+                </li>  
+
+            </ul>
+</li>
+
+            </ul>
+        </nav>
+    </div>
+
+
+
+    
+    
+<div id="content" class="main-content">
+
+<script src="https://www.teletick.fr/portalassets/specialistassets/js/bar-chart-min.js"></script>
+<link href="https://www.teletick.fr/portalassets/specialistassets/css/specialist_res.css" rel="stylesheet" />
+
+<div id="top-panel">	
+    <div id="left-text">	
+      <h3 class="top-title tit">	
+      Tableau de Bord</h3>	
+    </div>	
+  </div>  
+
+<style>
+#box-border{	
+  height:458px;	
+}
+.navbar .navbar-item .nav-item.dropdown .dropdown-menu:after {
+    position: absolute;
+    content: '';
+   }
+
+.fa-eur{
+  font-size: 2.1rem;
+  color: #787FFD;
+  font-weight: 500;
+  padding-left: 3px;
+}
+#face_to_face_consult{
+  color: #40ABE7!important;
+  padding-top: 2px;
+}
+#euro-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.face-to-face-c-text{
+  font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;
+    line-height: 26px;
+    color: #40ABE7;
+    opacity: 0.5;
+    text-align: center;
+}
+@media (width:280px) 
+{
+ .spacing-mobile{
+  margin-top:3rem;
+ } 
+}
+
+@media (max-width: 767px){	
+  .clients-text, .online-consultation-text, .average-length-text, .face-to-face-c-text{	
+    font-size: 17px;	
+    line-height: 17px;	
+    text-transform:uppercase;	
+  }	
+  .widget.widget-one{	
+    padding: 14px 1px;	
+  }	
+  .cash-in-cout{	
+    font-size: 33px!important;	
+  }	
+  .layout-spacing{	
+    padding: 11px 5px;	
+  }	
+  .tab-select-outer{	
+    display:none;	
+  }	
+  .tab-contents{	
+   margin-top: 0px!important;	
+  }	
+  #tab-button{	
+    box-shadow: 0 4px 6px 0 rgb(85 85 85 / 8%), 0 1px 20px 0 rgb(0 0 0 / 7%), 0px 1px 11px 0px rgb(0 0 0 / 7%)!important;	
+    width: 100%!important;	
+  }	
+  .tab-contents{	
+    border-top-right-radius:0px!important;	
+  box-shadow: 0px 15px 10px -15px #111!important;    	
+  }
+#box-border{	
+  height:auto;	
+}	
+}	
+
+</style>
+
+
+
+<div class="col-lg-10 col-md-10 col-sm-10 rightwidth rightwidth2 space1">
+    <div id="alerts" style="margin-top: 2rem;">
+        
+    </div>
+    <div class="dash">
+        <div class="headersms resp1 resp2">
+            <div class="smsone"><p>Message(s) envoyé(s) ce jour : <span>0</span></p></div>
+            <div class="smsone"><p>Message(s) planifié(s): <span>0</span></p></div>
+            <div class="smsone"><p>Message(s) restant(s): <span>300</span></p></div>
+            <div class="clear"></div>
+        </div>
+    
+        <div class="dashone">
+            <div class="dashgraph">
+                <div class="graph-bt">
+                    <span style="font-size: 18px; ">Compteur des Messages</span></br><br>
+                </div>
+            
+                    <div id="lineq" class="gp-bt">
+                        <span style="font-size: 15px;">Voir la Durée : &nbsp; &nbsp;</span>
+                        <button id="single-btn1_30" onclick="checkline('30');" class="btn btn-lg active"><span class="val">30</span> jours</button>
+                        <button id="single-btn1_60" onclick="checkline('60');" class="btn btn-lg "><span class="val">60</span> jours</button>
+                        <button id="single-btn1_90" onclick="checkline('90');" class="btn btn-lg "><span class="val">90</span> jours</button>
+                    </div>
+                    <div class="cls"></div>
+              
+                <div>
+                    <div id="linechartdiv"><div style="position: relative;"><div style="position: relative; width: 1076px; height: 200px;background-color: red;" dir="ltr"><div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;" aria-label="A chart."><svg width="1076" height="200" style="overflow: hidden;" aria-label="A chart."><defs id="_ABSTRACT_RENDERER_ID_0"><clipPath id="_ABSTRACT_RENDERER_ID_1"><rect x="110" y="38" width="857" height="124"></rect></clipPath></defs><rect x="0" y="0" width="1076" height="200" stroke="none" stroke-width="0" fill="#ffffff"></rect><g><rect x="981" y="38" width="81" height="14" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><rect x="981" y="38" width="81" height="14" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="1014" y="49.9" font-family="Arial" font-size="14" stroke="none" stroke-width="0" fill="#222222">Mess…</text><rect x="1014" y="38" width="48" height="14" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect></g><path d="M981,45L1009,45" stroke="#3366cc" stroke-width="2" fill-opacity="1" fill="none"></path></g></g><g><rect x="110" y="38" width="857" height="124" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g clip-path="url(https://www.experttexting.com/appv2/Dashboard#_ABSTRACT_RENDERER_ID_1)"><g><rect x="110" y="161" width="857" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="110" y="100" width="857" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="110" y="38" width="857" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="110" y="130" width="857" height="1" stroke="none" stroke-width="0" fill="#ebebeb"></rect><rect x="110" y="69" width="857" height="1" stroke="none" stroke-width="0" fill="#ebebeb"></rect></g><g><rect x="110" y="161" width="857" height="1" stroke="none" stroke-width="0" fill="#333333"></rect></g></g><g></g><g><g><text text-anchor="end" x="96" y="166.4" font-family="Arial" font-size="14" stroke="none" stroke-width="0" fill="#444444">0.0</text></g><g><text text-anchor="end" x="96" y="104.9" font-family="Arial" font-size="14" stroke="none" stroke-width="0" fill="#444444">0.5</text></g><g><text text-anchor="end" x="96" y="43.4" font-family="Arial" font-size="14" stroke="none" stroke-width="0" fill="#444444">1.0</text></g></g></g><g><g><text text-anchor="middle" x="538.5" y="189.9" font-family="Arial" font-size="14" font-style="italic" stroke="none" stroke-width="0" fill="#ff0000">Jours</text><rect x="110" y="178" width="857" height="14" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect></g></g><g></g></svg><div aria-label="A tabular representation of the data in the chart." style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;"><table><thead><tr><th>Date</th><th>Message Count</th></tr></thead><tbody></tbody></table></div></div></div><div style="display: none; position: absolute; top: 210px; left: 1086px; white-space: nowrap; font-family: Arial; font-size: 14px; color:#537E36 ;" aria-hidden="true">Messa…</div><div></div></div></div>
+                </div>
+            </div>
+            <div class="dashcart">
+                <div class="graph-bt ">
+                    <span style="font-size: 18px;">Status des Messages</span><br><br>
+                </div>
+                    <div id="barq" class="gp-bt">
+                        <span style="float: left; font-size: 15px;">Voir la Durée : &nbsp; &nbsp;</span>
+                        <button id="single-btn2_30" onclick="checkbar('30')" class="btn btn-lg active"><span>30</span> jours</button>
+                        <button id="single-btn2_60" onclick="checkbar('60')" class="btn btn-lg"><span>60</span> jours</button>
+                        <button id="single-btn2_90" onclick="checkbar('90')" class="btn btn-lg"><span>90</span> jours</button>
+                    </div>
+                    <div class="cls"></div>
+                </div>
+                <div>
+                    <div id="barchartdiv"><div style="position: relative;"><div style="position: relative; width: 1076px; height: 200px;" dir="ltr"><div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;" aria-label="A chart."><svg width="1076" height="200" style="overflow: hidden;" aria-label="A chart."><defs id="_ABSTRACT_RENDERER_ID_2"><clipPath id="_ABSTRACT_RENDERER_ID_3"><rect x="110" y="38" width="857" height="124"></rect></clipPath></defs><rect x="0" y="0" width="1076" height="200" stroke="none" stroke-width="0" fill="#ffffff"></rect><g><rect x="981" y="38" width="81" height="37" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><rect x="981" y="38" width="81" height="14" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="1014" y="49.9" font-family="Arial" font-size="14" stroke="none" stroke-width="0" fill="#222222">Succès</text></g><rect x="981" y="38" width="28" height="14" stroke="none" stroke-width="0" fill="#537E36"></rect></g><g><rect x="981" y="61" width="81" height="14" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="1014" y="72.9" font-family="Arial" font-size="14" stroke="none" stroke-width="0" fill="#222222">Echec</text></g><rect x="981" y="61" width="28" height="14" stroke="none" stroke-width="0" fill="#dc3912"></rect></g></g><g><rect x="110" y="38" width="857" height="124" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g clip-path="url(https://www.experttexting.com/appv2/Dashboard#_ABSTRACT_RENDERER_ID_3)"><g><rect x="110" y="161" width="857" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="110" y="100" width="857" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="110" y="38" width="857" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="110" y="130" width="857" height="1" stroke="none" stroke-width="0" fill="#ebebeb"></rect><rect x="110" y="69" width="857" height="1" stroke="none" stroke-width="0" fill="#ebebeb"></rect></g><g><rect x="110" y="161" width="857" height="1" stroke="none" stroke-width="0" fill="#333333"></rect></g></g><g></g><g><g><text text-anchor="end" x="96" y="166.4" font-family="Arial" font-size="14" stroke="none" stroke-width="0" fill="#444444">0.0</text></g><g><text text-anchor="end" x="96" y="104.9" font-family="Arial" font-size="14" stroke="none" stroke-width="0" fill="#444444">0.5</text></g><g><text text-anchor="end" x="96" y="43.4" font-family="Arial" font-size="14" stroke="none" stroke-width="0" fill="#444444">1.0</text></g></g></g><g><g><text text-anchor="middle" x="538.5" y="189.9" font-family="Arial" font-size="14" font-style="italic" stroke="none" stroke-width="0" fill="#ff0000">Jours</text><rect x="110" y="178" width="857" height="14" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect></g></g><g></g></svg><div aria-label="A tabular representation of the data in the chart." style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;"><table><thead><tr><th>Date</th><th>Sent</th><th>Failed</th></tr></thead><tbody></tbody></table></div></div></div><div style="display: none; position: absolute; top: 210px; left: 1086px; white-space: nowrap; font-family: Arial; font-size: 14px;" aria-hidden="true">Failed</div><div></div></div></div>
+                </div>
+            </div>
+            <div class="clear">
+                
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/javascript" defer="defer">
+    google.load("visualization", "1", { packages: ["corechart"] });
+    google.setOnLoadCallback(function () { fetchlinedata(); });
+
+    function fetchlinedata() {
+        $.ajax({
+            type: "Get",
+            url: '/appv2/Dashboard/_FillLineChart',
+            data: { 'dayscount': 30 },
+            dataType: 'JSON',
+            async: true,
+            success: function (data) {
+                if (data.msg == "success") {
+                var data1 = new google.visualization.DataTable();
+                data1.addColumn('string', 'Date');
+                data1.addColumn('number', 'Message Count');
+                var rows=data.Data.length;
+                data1.addRows(rows);
+                $.each(data.Data,
+                    function(index, value) {
+                        var row = new Array();
+                        row[0] = value.DateVal;
+                        row[1] = value.NumVal;
+                        data1.addRow(row);
+                    });
+
+                    drawlineChart(data1);
+                }
+            },
+            error: function (data) {
+            }
+        });
+    }
+
+    function drawlineChart(data) {
+        var chart = new google.visualization.LineChart(document.getElementById('linechartdiv'));
+        var options = {
+            curveType: "function",
+            hAxis: { title: 'Days', titleTextStyle: { color: 'red' } }
+        };
+        chart.draw(data, options);
+    }
+
+    function checkline(days) {
+           $("#lineq button").removeClass('active');
+           $('#single-btn1_' + days).addClass('active');
+        $.ajax({
+            type: "Get",
+            async: true,
+            url: '/appv2/Dashboard/_FillLineChart',
+            data: { 'dayscount': days },
+            dataType: 'JSON',
+            success: function (data) {
+                if (data.msg == "success") {
+                var data1 = new google.visualization.DataTable();
+                data1.addColumn('string', 'Date');
+                data1.addColumn('number', 'Message Count');
+                var rows = data.Data.length;
+                data1.addRows(rows);
+                $.each(data.Data,
+                    function(index, value) {
+                        var row = new Array();
+                        row[0] = value.DateVal;
+                        row[1] = value.NumVal;
+                        data1.addRow(row);
+                    });
+
+                var chart = new google.visualization.LineChart(document.getElementById('linechartdiv'));
+                var view = new google.visualization.DataView(data1);
+                var options = {
+                    curveType: "function",
+                    hAxis: { title: 'Days', titleTextStyle: { color: 'red' } }
+                };
+                    chart.draw(view, options);
+                }
+            },
+            error: function (data) {
+            }
+        });
+    }
+
+    //google.load("visualization", "1", { packages: ["corechart"] });
+
+    google.setOnLoadCallback(function () { fetchbardata(); });
+
+    function fetchbardata() {
+        $.ajax({
+            type: "Get",
+            url: '/appv2/Dashboard/_FillBarChart',
+            data: { 'dayscount': 30 },
+            dataType: 'JSON',
+            async: true,
+            success: function (data) {
+                if (data.msg == "success") {
+                var data1 = new google.visualization.DataTable();
+                data1.addColumn('string', 'Date');
+                data1.addColumn('number', 'Sent');
+                data1.addColumn('number', 'Failed');
+                var rows = data.Data.length;
+                data1.addRows(rows);
+                $.each(data.Data, function(index, value) {
+                    var row = new Array();
+                    row[0] = value.DateVal;
+                    row[1] = value.Delivered;
+                    row[2] = value.Pending;
+                    data1.addRow(row);
+                });
+                    drawbarChart(data1);
+                }
+            },
+            error: function (data) {
+            }
+        });
+    }
+
+    function drawbarChart(data) {
+        var chart = new google.visualization.ColumnChart(document.getElementById('barchartdiv'));
+        var options = {
+            hAxis: { title: 'Days', titleTextStyle: { color: 'red' } }
+        };
+        chart.draw(data, options);
+    }
+
+    function checkbar(days) {
+        $("#barq button").removeClass('active');
+        $('#single-btn2_' + days).addClass('active');
+        $.ajax({
+            type: "Get",
+            url: '/appv2/Dashboard/_FillBarChart',
+            data: { 'dayscount': days },
+            dataType: 'JSON',
+            async: true,
+            success: function (data) {
+                if (data.msg == "success") {
+                    var data1 = new google.visualization.DataTable();
+                    data1.addColumn('string', 'Date');
+                    data1.addColumn('number', 'Sent');
+                    data1.addColumn('number', 'Failed');
+                    var rows = data.Data.length;
+                    data1.addRows(rows);
+                    $.each(data.Data, function(index, value) {
+                        var row = new Array();
+                        row[0] = value.DateVal;
+                        row[1] = value.Delivered;
+                        row[2] = value.Pending;
+                        data1.addRow(row);
+                    });
+                    var chart = new google.visualization.ColumnChart(document.getElementById('barchartdiv'));
+                    var view = new google.visualization.DataView(data1);
+                    chart.draw(view);
+                }
+            },
+            error: function (data) {
+            }
+        });
+    }
+
+    
+
+    $(document).ready(function () {
+        GetUserBalance(1);
+    });
+</script>
+
+        </div>
+    </div>
+    <div id="footer" style="height: 6.00600% !important">
+        <div class="container">
+            
+        </div>
+    </div>
+    <!--footer-->
+    <div id="BfOffer" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static" style="width: auto !important;">
+        <div class="modal-body" style="overflow-y: auto !important; max-height: none !important; padding: 5px !important;">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="top: 5px; position: absolute; right: 11px; color: white; opacity: 1;">×</button>
+            <a href="https://www.facebook.com/events/1492696821035166/" target="_blank"><img src="Dashboard_Sms_fichiers/etbg2015_web.jpg"></a>
+        </div>
+    </div>
+    <script src="Dashboard_Sms_fichiers/jquery"></script>
+
+    
+    <script src="Dashboard_Sms_fichiers/jquery-ui.js"></script>
+    <link href="Dashboard_Sms_fichiers/jquery-ui.css" rel="stylesheet" type="text/css">
+    <script src="Dashboard_Sms_fichiers/jqueryval"></script>
+
+    <script src="Dashboard_Sms_fichiers/bootstrap"></script>
+
+    <script src="Dashboard_Sms_fichiers/modernizr"></script>
+
+    
+
+    
+    <script type="text/javascript" src="Dashboard_Sms_fichiers/bootstrap.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $("input").attr("autocomplete", "off");
+
+        $("#sub-textone").click(function() {
+            $("#sub-texttwo").animate({ height: 'toggle' }, "slow");
+        });
+
+        // Menu Sub-menu toggle
+        $('.main-menu-li-1').click(function() {
+            $('.sub-menu-li-1').toggle('slow');
+        });
+
+        //// First Time Popup Code
+        ////localStorage.removeItem('bf-offer');
+        //var isshow = localStorage.getItem('bf-offer');
+        //if (isshow == null) {
+        //    localStorage.setItem('bf-offer', 1);
+
+        //    // Show popup here
+        //    $('#BfOffer').modal('show');
+        //}
+    });
+
+    function GetUserBalance(type) {
+        $.ajax({
+            url: "/appv2/Dashboard/GetCustomerBalance",
+            data: { type: type },
+            type: 'Get',
+            success: function(result) {
+                if (result.indexOf("|") >= 0) {
+                    var arr = result.split('|');
+                    $("#blncText").html(arr[0]);
+                    $("#dashboradbalance").html(arr[1]);
+                } else {
+                    $("#dashboradbalance").html(result);
+                }
+            },
+            error: function() {
+                alert("Error");
+            }
+        });
+        }
+
+</script>
+
+    <!--Start of Zopim Live Chat Script-->
+    <script type="text/javascript">
+        window.$zopim ||
+            (function (d, s) {
+                var z = $zopim = function (c) { z._.push(c) },
+                    $ = z.s =
+                        d.createElement(s),
+                    e = d.getElementsByTagName(s)[0];
+                z.set = function (o) {
+                    z.set._.push(o)
+                };
+                z._ = [];
+                z.set._ = [];
+                $.async = !0;
+                $.setAttribute('charset', 'utf-8');
+                $.src = '//v2.zopim.com/?yRLkBcivNAMIXE2Jna0cjCRbaE8j1svq';
+                z.t = +new Date;
+                $.type = 'text/javascript';
+                e.parentNode.insertBefore($, e)
+            })(document, 'script');
+    </script>
+    <!--End of Zopim Live Chat Script-->
+
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-39180476-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script><div style="position: absolute; display: none;"><div style="background: infobackground none repeat scroll 0% 0%; padding: 1px; border: 1px solid infotext; font-size: 14px; margin: 14px; font-family: Arial;">Message Count</div></div>
+
+
+
+
+</body></html>
+    
+            </body>
+    
+    </html>
+    
+
+
+<script type="text/javascript" src="https://www.teletick.fr/portalassets\js\users\dashboard_specialist.js"></script>
+<script type="text/javascript">
+  $('#summary-first').click(function() {
+    $(this).find('i').toggleClass('fa-heart-o fa-heart')
+  });
+  $('#summary-second').click(function() {
+    $(this).find('i').toggleClass('fa-heart-o fa-heart')
+  });
+  $('#summary-third').click(function() {
+    $(this).find('i').toggleClass('fa-heart-o fa-heart')
+  });
+</script>
+
+<script>
+  $(document).ready(function () 
+  {
+    var divs = $('.paymentinvoice>div');
+    var now = 0; 
+    divs.hide().first().show();
+    $("button[name=next]").click(function (e) {
+      divs.eq(now).hide();
+      now = (now + 1 < divs.length) ? now + 1 : 0;
+      divs.eq(now).show(); 
+    });
+    $("button[name=prev]").click(function (e) {
+      divs.eq(now).hide();
+      now = (now > 0) ? now - 1 : divs.length - 1;
+      divs.eq(now).show(); 
+    });
+  });
+</script>
+
+<!--Bar chart tab css & script start-->
+
+
+<style>
+    .dashboard-below-line-new{
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 500;
+            font-size:18px;
+            line-height: 37px;
+            text-align: center;
+           /* text-transform: capitalize;*/
+            color: #537E36;
+    }
+    .mydivs {
+    margin-left: -6px;
+    margin-top: 0px;
+}
+    .tab-contents {
+   
+    border-bottom-left-radius:8px;
+    border-bottom-right-radius: 8px;
+    border-top-right-radius:8px;
+    background:#fff;
+    box-shadow: 0 4px 6px 0 rgba(85, 85, 85, 0.08), 0 1px 20px 0 rgba(0, 0, 0, 0.07), 0px 1px 11px 0px rgba(0, 0, 0, 0.07);
+
+    }
+     .is-active a{
+    color:#A7D08E!important;
+    }
+
+.tabs {
+  max-width: 640px;
+  margin: 0 auto;
+/*  padding: 0 20px;*/
+}
+#tab-button {
+  display: table;
+  table-layout: fixed;
+  width:50%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#tab-button li {
+  display: table-cell;
+  width: 20%;
+}
+#tab-button li a {
+    display: block;
+    padding: .5em;
+    background:#fff;
+    text-align: center;
+    color: rgba(44, 63, 52, 0.5);
+    text-decoration: none;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+}
+
+#tab-button li:not(:first-child) a {
+  border-left: none;
+}
+
+#tab-button li a:hover,
+#tab-button .is-active a {
+  border-bottom-color: transparent;
+  background: #fff;
+  padding-right:1rem!important;
+}
+
+.tab-contents {
+  padding: .5em 2em 1em;
+  
+}
+
+
+
+.tab-button-outer {
+ display:block;
+}
+.tab-contents {
+  margin-top: 20px;
+}
+@media screen and (min-width: 768px) {
+  .tab-button-outer {
+    position: relative;
+    z-index: 2;
+    display: block;
+  }
+  .tab-select-outer {
+    display:none;
+  }
+  .tab-contents {
+    position: relative;
+    top: -1px;
+    margin-top: 0;
+  }
+}
+</style>
+<script>
+
+$(function() {
+  var $tabButtonItem = $('#tab-button li'),
+      $tabSelect = $('#tab-select'),
+      $tabContents = $('.tab-contents'),
+      activeClass = 'is-active';
+
+  $tabButtonItem.first().addClass(activeClass);
+  $tabContents.not(':first').hide();
+      
+//Date Slider In Month 
+    var divs = $('.paymentinvoice1>div');
+    var now = 0; 
+    divs.hide().first().show();
+    $("button[name=next]").click(function (e) {
+      divs.eq(now).hide();
+      now = (now + 1 < divs.length) ? now + 1 : 0;
+      divs.eq(now).show(); 
+    });
+    $("button[name=prev]").click(function (e) {
+      divs.eq(now).hide();
+      now = (now > 0) ? now - 1 : divs.length - 1;
+      divs.eq(now).show(); 
+    });
+//Date Slider In Month end
+  $tabButtonItem.find('a').on('click', function(e) {
+    var target = $(this).attr('href');
+
+    $tabButtonItem.removeClass(activeClass);
+    $(this).parent().addClass(activeClass);
+    $tabSelect.val(target);
+    $tabContents.hide();
+    $(target).show();
+    e.preventDefault();
+  });
+
+  $tabSelect.on('change', function() {
+    var target = $(this).val(),
+        targetSelectNum = $(this).prop('selectedIndex');
+
+    $tabButtonItem.removeClass(activeClass);
+    $tabButtonItem.eq(targetSelectNum).addClass(activeClass);
+    $tabContents.hide();
+    $(target).show();
+      
+          
+  });
+});
+</script>
+
+<script>
+        $(document).ready(function () 
+        {
+            var divs = $('.paymentinvoice1>div');
+            var now = 0; 
+            divs.hide().first().show();
+            $("button[name=next-01]").click(function (e) {
+                divs.eq(now).hide();
+                now = (now + 1 < divs.length) ? now + 1 : 0;
+                divs.eq(now).show(); 
+            });
+            $("button[name=prev-01]").click(function (e) {
+                divs.eq(now).hide();
+                now = (now > 0) ? now - 1 : divs.length - 1;
+                divs.eq(now).show(); 
+            });
+        });
+</script>
+
+<script type="text/javascript">
+  $("#next").click(function(){
+    
+  });
+</script>
+<div class="footer-wrapper kntest" >
+    <div class="footer-section f-section-1">
+    </div>
+</div>
+</div><!-- open in left_sidebar-->
+</div><!-- open in portal_header_view-->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+<script src="https://www.teletick.fr/portalassets/specialistassets/plugins/jquery-ui/jquery-ui.min.js"></script>
+<script src="https://www.teletick.fr/portalassets/specialistassets/bootstrap/js/popper.min.js"></script>
+<script src="https://www.teletick.fr/portalassets/specialistassets/bootstrap/js/bootstrap.min.js"></script>
+<script src="https://www.teletick.fr/portalassets/specialistassets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+<script src="https://www.teletick.fr/portalassets/specialistassets/js/app.js"></script>
+<script>
+$(document).ready(function() {
+    App.init();
+});
+</script>
+<script src="https://www.teletick.fr/portalassets/specialistassets/plugins/highlight/highlight.pack.js"></script>
+<script src="https://www.teletick.fr/portalassets/specialistassets/js/custom.js"></script>
+<script src="https://www.teletick.fr/portalassets/specialistassets/js/scrollspyNav.js"></script>
+<script src="https://www.teletick.fr/portalassets/specialistassets/plugins/apex/apexcharts.min.js"></script>
+<script src="https://www.teletick.fr/portalassets/specialistassets/plugins/apex/custom-apexcharts.js"></script>
+<script src="https://www.teletick.fr/portalassets/specialistassets/js/dashboard/dash_1.js"></script>
+<script src="https://www.teletick.fr/portalassets/plugins/toastr/toastr.min.js"></script>
+<script src="https://www.teletick.fr/portalassets/specialistassets/plugins/dropify/dropify.min.js"></script>
+<script src="https://www.teletick.fr/portalassets/specialistassets/plugins/blockui/jquery.blockUI.min.js"></script>
+<script src="https://www.teletick.fr/portalassets/specialistassets/js/users/account-settings.js"></script>
+<!-- <script src="https://www.teletick.fr/portalassets/specialistassets/plugins/flatpickr/flatpickr.js"></script> -->
+<script src="https://www.teletick.fr/portalassets/specialistassets/plugins/flatpickr/flatpickr.js"></script>
+<script src="https://www.teletick.fr/portalassets/specialistassets/plugins/flatpickr/custom-flatpickr.js"></script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrdPk_2EfxYiob_P4mtHq46j7P9BIwPIA
+&callback=initMap&libraries=places&v=weekly&callback=initMap" async></script>
+<style type="text/css">            
+#share_profile a.fa {
+    width: 17px;
+    font-size: 26px;
+    margin: 10px;
+}
+</style>
+
+
+<script src="https://www.teletick.fr/portalassets/specialistassets/js/dashboard/dash_2.js"></script>
+
+<script type="text/javascript">
+    function shareinsocialmedia(url){
+        window.open(url,'sharein','toolbar=0,status=0,width=648,height=395');
+        return true;
+    }
+
+
+function myFunction() {
+  var copyText = document.getElementById("myInput");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /* For mobile devices */
+  document.execCommand("copy");
+}
+
+</script>
+
+
+
+
+
+<!-- Calling popup -->
+
+
+    <div class="modal" tabindex="-1" id="appointment_alert" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" style="color: #537e36;">Appel en cours de votre praticien…</h5>
+            
+          </div>
+          <div class="modal-body">
+
+            <p>Veuillez rejoindre la salle d'attente virtuelle afin de recevoir l'appel</p>
+          </div>
+          <div class="modal-footer">
+
+         
+        <input type="hidden" class="appointment_alert_status" value="not_displayed_yet">
+
+            <button type="button" style="text-decoration: none; color: #fff !important;
+        background-color: #537e36!important;border-color: #709258;" class="btn btn-primary alert_btn"><a style="color: #fff;" href="https://www.teletick.fr/client/waiting_room" >Rejoindre la salle</a></button>
+
+
+            <button type="button" class="btn btn-secondary close_popup alert_btn" style="color: #fff !important;background-color: #c3180b !important;border-color: #8c170e !important;" data-dismiss="modal">Fermer</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" tabindex="-1" id="share_profile" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="row">
+                <div class="" style="color: #2a3f1b;padding-left: 10px;padding-right: 10px;font-size: 18px;">Entrez en contact avec les gens en partageant votre profil...</div>
+            </div>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12" style="text-align: center;    height: 120px;">
+                    <img style="width:auto;height:50%" src="https://www.teletick.fr/uploadimages/">
+                    <h5 class="modal-title" style="color: #537e36;">Test Hello</h5>
+                  <div class="mb-3">
+                        <a href="https://www.facebook.com/sharer.php?u=https://www.teletick.fr/book_appointment/medecinealternative/TestHello/ODMw&t=Test Hello"  class="fa fa-facebook"></a>
+
+                    <!--   <a href="#" onclick="shareinsocialmedia('http://www.linkedin.com/shareArticle?mini=true&url=&title=')" class="fa fa-linkedin"></a>
+ -->
+                        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.teletick.fr%2Fbook_appointment%2Fmedecinealternative%2FTestHello%2FODMw" class="fa fa-linkedin"></a>
+                        
+                        <!-- <a href="#" onclick="shareinsocialmedia('http://twitter.com/home?status=+')" class="fa fa-twitter"></a> -->
+                         <a href="#" onclick='shareinsocialmedia("https://twitter.com/intent/tweet?url=https://www.teletick.fr/book_appointment/medecinealternative/TestHello/ODMw&text=Test Hello")' class="fa fa-twitter"></a>
+                        
+
+                    </div>
+                    </div>
+                    
+                
+            </div>
+
+            <div class="copy_toclipboard row mt-3" style="border-top: 1px solid;padding-top: 10px;">
+                    <div class="col-md-8 form-group">
+                        <input type="text" readonly="" class="form-control" value="https://www.teletick.fr/book_appointment/medecinealternative/TestHello/ODMw" id="myInput">
+                    </div>
+                    <div class="col-md-4 " style="display: block;">
+                        <button  style="float:right;background: #2a3f1b!important; padding: 10px !important; color: #fff !important" class="btn  btn-sm" onclick="myFunction()">Copier le lien</button>
+                    </div>
+            </div>
+               
+        </div>
+      </div>
+    </div>
+
+
+<script type="text/javascript">
+    
+    $(".alert_btn").on('click',function(e){
+        $.ajax({
+           type: 'POST',
+           url:base_url+'portal/client/appointments/update_call_status',
+           data:{ appointment_id:$('#appointment_id').val(),csrf_teletick_tkn:csrf_hash,status:'popup_displayed'},
+           success: function(reponse){
+           }
+          });
+    });
+
+ 
+
+</script>
+
+
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  
+</head>
+<body>
+
+<script src="js/togglesms.js"></script>
+
+<script type="text/javascript">
+  //Insert Basic JS code here
+//Set your APP_ID
+var APP_ID = "uwfm8wdp";
+
+// Set Show Event to be false initiall
+var SHOW_EVENT = false;
+
+window.intercomSettings = {
+    app_id: 'uwfm8wdp',
+    email: 'julesbekuti@teletick.fr',
+    name: 'Test Hello',
+    user_id: '6317',
+    avatar: {
+    "type": "avatar", 
+    "image_url" :"https://www.teletick.fr/uploadimages/"
+  }
+  };
+(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function")
+{ic('reattach_activator');ic('update',intercomSettings);}else
+{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args)
+{i.q.push(args)};w.Intercom=i;function l()
+{var s=d.createElement('script');s.type='text/javascript';s.async=true;
+s.src='https://widget.intercom.io/widget/' + APP_ID;
+var x=d.getElementsByTagName('script')
+[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent)
+{w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()
+
+
+function messenger(display) {
+  //Insert sign out code here
+  Intercom(display)
+  return(true) //check to see if code was correctly copied
+}
+
+// Code to show snippet code on toggle
+function toggle(element) {
+    document.getElementById(element).style.display = (document.getElementById(element).style.display == "none") ? "" : "none";
+}
+
+//Code to check that launcher is loading
+var retries = 0;
+var launcherExist = setInterval(function() {
+  if($('.intercom-launcher-frame').length) {
+    $('.checkmark').css({'display':'inline-block'});
+    $('.still-no-messenger').hide();
+    clearInterval(launcherExist);
+  }
+  retries += 1;
+  if (retries >= 120) {
+    clearInterval(launcherExist);
+  }
+}, 500);
+  
+$('#myCheck').click(function() {
+  if ($('#display').is(":visbile")) {
+    $('#display').hide();
+  } else {
+    $('#display').show();
+  }
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,1054 @@
+*::after {
+    box-sizing:border-box;
+}
+
+/* Custom properties */
+
+html {
+    scroll-behavior: smooth;
+}
+	
+
+
+.sel-box-pays,.sel-box-grp {
+	margin-top: 2rem;
+	}	
+
+.countryinput {
+	display:inline-block;
+	width:400px;
+	text-align: left; 
+	height:30px;
+	border-radius: 10px;
+    padding-left:2px;
+	margin-bottom: 1rem;
+	border: 1px solid black;
+		} 
+
+.mobinput {
+	display:inline-block;
+	width:200px;
+	text-align: left; 
+	height:30px;
+	border-radius: 10px;
+    padding-left:10px;
+	border: 1px solid black;
+		}
+
+.mob-text {
+	margin-bottom: -1rem;
+}
+	
+.balgrp {
+	display:inline-block;
+	width:270px;
+	text-align: left; 
+	height:30px;
+	border-radius: 10px;
+	padding-left:10px;
+	border: 1px solid black;
+	margin-bottom: 1rem;
+	}	
+
+.groupinput {
+	display:inline-block;
+	width:400px;
+	text-align: left; 
+	height:30px;
+	border-radius: 10px;
+    padding-left:10px;
+	border: 1px solid black;
+	margin-bottom: 1rem;
+}
+
+textarea{
+	display:inline-block;
+	width:400px;
+	height: 100px;
+	border-radius: 10px;
+    padding-left:5px;
+    padding-top:4px;
+	border: 1px solid black;
+		}
+		
+.sender-text-message {
+	margin-bottom: 2rem;
+}
+
+#SendTime {
+	margin-top: 1rem;
+	margin-bottom: 2rem;
+	display:inline-block;
+	width:200px;
+	text-align: left; 
+	height:30px;
+	border-radius: 10px;
+    padding-left:10px;
+	border: 1px solid black;
+}
+
+.send-btn {
+	display:inline-block;
+	width:110px;
+	height:30px;
+	border-radius: 5px;
+    padding: left 2px;
+	border: 1px solid black;
+	}
+
+.btn2 {
+	background-color: #dbdcdf;
+		}
+	
+.tabbor{
+		font-family:"Poppins"!important;
+		float:right;
+		color:black;
+		font-weight: 500;
+			}
+
+span.tabbor {
+	padding-left: 15px;
+}
+
+img.tabbor {
+	margin-left:30rem;
+}
+
+
+.space1 {
+	margin-top: 1rem;
+}
+	
+/* BOUTONS RADIO */
+
+.btn:active,
+.active {
+	color: white!important;
+	background-color: #A7D08E!important;
+  	border-color:  #A7D08E!important;
+}
+
+.btn-toggle{
+	color: white!important;
+	background-color: #A7D08E!important;
+  	border-color:  #A7D08E!important;
+}
+
+
+
+input[type='radio']:after {
+	width: 15px;
+	height: 15px;
+	border-radius: 15px;
+	top: -2px;
+	left: -1px;
+	position: relative;
+	background-color: white;
+	content: '';
+	display: inline-block;
+	visibility: visible;
+	border: 0.5px solid black
+}
+
+input[type='radio']:checked:after {
+	width: 15px;
+	height: 15px;
+	border-radius: 15px;
+	top: -2px;
+	left: -1px;
+	position: relative;
+	background-color: #A7D08E;
+	content: '';
+	display: inline-block;
+	visibility: visible;
+	border: 0.5px solid black;
+	}
+
+/* MENU DROPDOWN TOPBAR */
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+	}
+	  
+.dropdown-menu {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	padding: 12px 16px;
+	z-index: 1;
+	}
+	  
+	  
+.dropbtn {
+	background-color: #4CAF50;
+	color: white;
+	padding: 16px;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+	}
+	  
+.dropdown {
+	position: relative;
+	display: inline-block;
+	}
+	  
+	  
+.dropdown-menu a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	}
+	  
+.dropdown-menu .dropdown-menu-right.show :hover{
+background-color: white;
+}
+
+
+/* DASHBOARD */
+
+.headersms{
+	display: block;
+	background-color: #EDEBEE;
+    line-height: 30px;
+	height: 5rem;
+	width: 100%;
+    margin: 20px auto;
+	padding-top: 25px;
+		}
+
+ 
+.smsone {
+	float: left;
+	padding-right: 160px;
+	padding-left: 160px;
+  }
+
+
+
+.smsone p {
+	box-sizing: border-box;
+	display: block;
+    color: #D46023;
+    font-size: 18px;
+    padding-left: 20px;
+		}
+
+
+.dashone {
+	margin-top: 3rem;
+	margin-left: 10rem;
+}
+
+.dashgraph {
+	margin-bottom: 3rem;
+}
+
+
+
+#lineq span,#barq span{
+	margin-left: 120px;
+}
+
+
+
+button #single-btn1_30,#single-btn1_60,#single-btn1_90 {
+	color:#537E36;
+	}
+
+button #single-btn2_30,#single-btn2_60, #single-btn2_90 {
+	color:#537E36;
+	}
+
+@media all and (max-width: 1024px){
+    p{
+	font-size : 14px;
+		}
+ }
+
+
+	
+@media all and (max-width: 1024px){
+	#email{
+	display:inline-block;
+    margin-top: 30px;
+	width:250px;
+	text-align: left; 
+	font-size: 17px;
+	height:25px;
+		}
+		
+	}	
+	
+@media all and (max-width: 1024px){
+	#sujet{
+	display:inline-block;
+	width:290px;
+	text-align: left; 
+	font-size: 17px;
+	height:25px;
+		}
+	}	
+	
+@media all and (max-width: 1024px){
+	#message{
+	display:inline-block;
+	width:330px;
+	font-size: 17px;
+	height: 300px;
+    margin-left: 3px;
+		}
+	}			
+	
+	
+		
+@media (min-width: 1024px) {
+	.headersms{
+		display: block;
+		background-color: #EDEBEE;
+    	line-height: 30px;
+		height: 5rem;
+		width: 100%;
+    	padding:auto;
+		}
+
+	.smsone {
+		float: left;
+		padding-right: 10px;
+		padding-left: 10px;
+		}		
+			
+		
+	.smsone p {
+		box-sizing: border-box;
+		display: block;
+		color: #D46023;
+		font-size: 16px;
+		}
+
+	.dashone {
+		margin-top: 1.5rem;
+		margin-left: 3rem;
+			}
+
+	
+	
+	#lineq span,#barq span{
+	margin-left: 20px;}			
+	}
+
+	
+/* SMS-TEMPLATES */
+
+.topbar {
+	height: 6rem;
+	padding-top: 1rem;
+}
+
+.rightwidth {
+	margin-top: 3rem;
+	margin-left: 5rem;
+	}
+
+.searchblock {
+	display: flex;
+	line-height: 3;
+}
+
+.searchblock input {
+	margin-left: 10px;
+}
+
+.searchblock .Register-btn {
+	color: white;
+	background-color: #A7D08E;
+	border-radius: 5px;
+	border: 1px solid #A7D08E;
+}
+
+.ajmode0{
+	margin-top: -3rem;
+	}
+
+.ajmodel  {
+	color: white;
+	background-color: #A7D08E;
+	border-radius: 5px;
+	border: 1px solid #A7D08E;
+	margin-left: 180%;
+	width: 250px;
+	padding-top:6px;
+	padding-bottom:5px;
+	
+}
+
+.portlet {
+	margin-top: 3rem;
+	box-shadow: 0 4px 6px 0 rgba(85, 85, 85, 0.08), 0 1px 20px 0 rgba(0, 0, 0, 0.07), 0px 1px 11px 0px rgba(0, 0, 0, 0.07);
+	}
+
+
+.chevron::before {
+		border-style: solid;
+		border-width: 0.25em 0.25em 0 0;
+		content: '';
+		display: inline-block;
+		height: 0.45em;
+		left: 0.10em;
+		position: relative;
+		top: 0.15em;
+		transform: rotate(-45deg);
+		vertical-align: middle;
+		align-content: center;
+		width: 0.45em;
+		padding: 3px 4px;
+	}
+
+.icon-chevron-right:before {
+	left: 0;
+	transform: rotate(45deg);
+	}
+
+.icon-chevron-left:before {
+	left: 0.25em;
+	transform: rotate(-135deg);
+	}
+
+	
+/* GESTION CONTACTS */
+
+.pdnon {
+margin-top: 5rem;
+margin-left: 7rem;
+	}
+
+.all-group {
+	margin-left: 43rem;
+	margin-top: -1.6rem;
+}
+
+.navbar-search {
+	margin-right: 5px;
+	margin-left: 20rem;
+	border-radius: 5px;
+    border: 2px solid #A7D08E;
+}
+
+table{
+	margin-top: 3rem;
+	width: 50rem;
+	box-shadow: 0 4px 6px 0 rgba(85, 85, 85, 0.08), 0 1px 20px 0 rgba(0, 0, 0, 0.07), 0px 1px 11px 0px rgba(0, 0, 0, 0.07);
+	}
+
+#viewcontactsform{
+	margin:80px 20.100px 0px;
+}
+
+.showpg{
+	margin-top: 3rem;
+}
+.chevron2::before {
+	border-style: solid;
+	border-width: 0.25em 0.25em 0 0;
+	content: '';
+	display: inline-block;
+	height: 0.45em;
+	left: 0.10em;
+	position: relative;
+	top: 0.15em;
+	transform: rotate(-45deg);
+	vertical-align: middle;
+	align-content: center;
+	width: 0.45em;
+	padding: 3px 4px;
+}
+
+.icon-chevron2-right:before {
+left: 0;
+transform: rotate(45deg);
+}
+
+.icon-chevron2-left:before {
+left: 0.25em;
+transform: rotate(-135deg);
+}
+	
+/* UPLOAD CONTACTS */
+
+.tablo{
+	margin-right: 4rem;
+}
+
+.nav-tabs {
+	margin-top:5rem;
+}
+
+.marj{
+	margin-top: 3rem;
+	margin-left: 2rem;
+		}
+
+.alrt{
+	margin-top: 3rem;
+}
+
+.file-upload-control{
+	width: 700px;
+	margin-left: -10rem;
+}
+	
+
+#ddgroup{
+	margin-top:10px;
+}
+
+#NumberFormat{
+	margin-top:10px;
+}
+
+.toto {
+	margin-top: 1rem;
+    color: white;
+    background-color: #A7D08E;
+	box-shadow: 0 4px 6px 0 rgba(85, 85, 85, 0.08), 0 1px 20px 0 rgba(0, 0, 0, 0.07), 0px 1px 11px 0px rgba(0, 0, 0, 0.07);
+	border:2px solid #A7D08E;
+	border-radius: 5px;
+}
+
+/* SCHEDULED MESSAGES*/
+
+#IndviGrid {
+background-color: white;
+margin-top: 3rem;
+margin-left: 2rem;
+margin-right: -5rem;
+}
+
+.nav-tabs {
+	margin-left: 2rem;
+	margin-right: -5rem;
+	background-color: white;
+}
+
+#Transactions{
+	background-color: white;
+}
+
+#GroupGrid {
+	background-color: white;
+	margin-top: 3rem;
+	margin-left: 2rem;
+	margin-right: -5rem;
+	}
+
+.white{
+	background-color: white;
+}
+
+/* ADD CONTACTS*/
+
+h3.top-title {
+	margin-top: 2rem;
+	margin-left: 1rem;
+	font-family: Poppins;
+	font-weight: 500;
+	font-size: 30px;
+}
+
+
+.form2 {	   
+	font-size: 15px;
+	margin-top: 5rem;
+	margin-left: 10%;
+	margin-right: 10%;
+	padding-top: 2rem;
+	padding-left: 22%;
+	width: 75%;
+	box-shadow: 0px 8px 16px 4px rgba(0,0,0,0.2);
+		} 
+
+						
+form input {
+		border:2px solid #A7D08E;
+	}
+	
+ul {
+    list-style:none;
+ }
+
+
+.hdnLi {
+    display: none;
+	}
+
+.pref {
+    display: flex;
+    justify-content: space-between;
+	padding-bottom: 2rem;
+	margin:10px 0px 0px;
+	padding:0px 100px 0px 0px;
+	width: 70%;
+	   }
+
+.pref span {
+   float: left;
+   width: 115px;
+   text-align: right;
+   margin-right: 20px;
+   color: #6c6c6c;
+   line-height: 50px;
+}
+
+.pref input {
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.pref2 {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+
+.pref2 span {
+	padding-top: 15px;
+	float: left;
+	text-align: right;
+	margin-right: 20px;
+	color: #6c6c6c;
+ }
+
+
+ .pref3  {
+	/*margin:10px 0px 0px;*/
+	padding:0px 100px 0px 0px;
+	width:30%;
+	height: 30px;
+    text-align: center;
+    margin-right: 5px;
+	margin-left: 50px;
+	margin-top: 2.5rem;
+    color: #6c6c6c;
+    line-height: 15px;
+	border:2px solid lightgray;
+    white-space: nowrap;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	   }
+
+.pref3 span {
+		padding-top: 15px;
+		float: left;
+		text-align: right;
+		margin-right: 20px;
+		color: #6c6c6c;
+	 }
+
+ 	 .pref3 ul.chzn-choices {
+		margin-top: 22px;
+		line-height: 40px;
+		float: left;
+		text-align: right;
+		margin-right: 20px;
+		color: #6c6c6c;
+		border-radius: 5px;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+			 }
+
+	 .pref4 {
+		display: flex;
+		justify-content: space-between;
+		padding-bottom: 1rem;
+		padding-top: 1rem;
+		margin:10px 0px 0px;
+		padding:0px 100px 0px 0px;
+		margin-left: 2px;
+		width: 70%;
+	   }
+
+	.pref4 input {
+		border:2px solid lightgray;
+			}
+	
+	.pref5 {
+		margin-left: -30px;
+		}
+
+	.cont li .signupnine {
+        margin-top: 4rem;
+		margin-left: 10rem;
+		padding-bottom: 4rem;
+		    }
+
+	.cont li .signupnine input{
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		color:black ;
+		background-color:#A7D08E ;
+		font-size: 17px;
+		border-radius: 5px;
+		text-align: center;
+	}
+
+	input#add_con_button.Register-btn:hover{
+		color: white;
+		background-color:#A7D08E ;
+	}
+/* RESPONSIVE ADD CONTACTS*/
+
+@media (max-width:720px) and (min-width: 540px){
+	#AddContactsForm.form2{
+		font-size: 13px;
+		margin-top: 2rem;
+		margin-left: 0;
+		margin-right: 0;
+		padding-top: 20px;
+		padding-left: 1rem;
+		width: 500px;
+		}	
+	
+	.cont li .signupnine {
+        margin-top: 4rem;
+		margin-left: 7rem;
+		padding-bottom: 4rem;
+		    }
+		}
+
+@media (max-width:667px) and (min-width: 375px){
+	#AddContactsForm.form2{
+		font-size: 13px;
+		margin-top: 2rem;
+		margin-left: -1rem;
+		margin-right: 0;
+		padding-top: 10px;
+		padding-left: 0;
+		width: 500px;
+				}	
+			}
+
+@media (max-width:414px) and (min-width: 896px){
+	.form2{
+		font-size: 13px;
+		margin-top: 2rem;
+		margin-left: 0;
+		margin-right: 0;
+		padding-top: 10px;
+		padding-left: -1rem;
+		width: 500px;
+				}	
+			
+			.cont li .signupnine {
+				margin-top: 4rem;
+				margin-left: 7rem;
+				padding-bottom: 4rem;
+					}
+				}
+
+
+@media (max-width:740px) and (min-width: 360px){
+	form#AddContactsForm.form2 {
+		font-size: 13px;
+		margin-top: 2rem;
+		margin-left: 1rem;
+		margin-right: 0;
+		padding-top: 10px;
+		padding-left: 0;
+		width: 550px;
+					}	
+							
+			.cont li .signupnine {
+				margin-top: 4rem;
+				margin-left: 6rem;
+				padding-bottom: 4rem;
+							}
+						}
+
+
+@media (max-width:480px) and (min-width: 321px){
+	.form2{
+	font-size: 13px;
+	margin-top: 2rem;
+	margin-left: 0;
+	margin-right: 0;
+	padding-top: 10px;
+	padding-left: 0;
+	width: 500px;
+	}	
+
+	.pref .esp {
+		margin-left: 32px;
+	}
+
+	.pref .formwidth1{
+		display: flex;
+		justify-content: space-between;
+		padding-bottom: 20px;
+		margin:0px 0px 0px;
+		width: 170px;
+		   }
+
+	.pref span{
+		   margin-left:10px;
+		}
+
+		.pref4 .formwidth2{
+		margin:0px 0px 0px;
+		width: 150px;
+		padding:0px 0px 0px 0px;
+						   }
+
+#Customer_Group_Code.chzn-select.pref3  {
+			margin:0px 5px 0px;
+			padding:0px 0px 0px 0px;
+			width:30%;
+			height: 30px;
+			text-align: center;
+			color: #6c6c6c;
+			line-height: 10px;
+			border:2px solid lightgray;
+			white-space: nowrap;
+			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+			   }
+		
+
+.pref4 .esp2{
+margin-top:10px;
+white-space: nowrap;
+margin-right:15px;
+				}
+
+.pref5 {
+margin-top: 20px;
+}
+	}
+
+@media (max-width:1180px) and (min-width: 820px){
+	form#AddContactsForm.form2{
+		font-size: 13px;
+		margin-top: 2rem;
+		margin-left: 5px;
+		margin-right: 0;
+		padding-top: 50px;
+		padding-left: 150px;
+		width: 800px;
+		height: 950px;
+		}	
+
+		span.esp {
+			margin-left: 28px;
+		}
+		
+	
+		input.formwidth1{
+			width: 350px;
+			margin-bottom: 20px;
+			   }
+
+			   span.label-style{
+				   line-height: 5px;
+				padding-left: 50px;		   
+			   }
+
+			   span.esp2 {
+				white-space: nowrap;
+				margin-right: 10px;
+				padding-top: 15px;
+				}
+
+				input.formwidth2{
+					width: 190px;
+					margin-bottom: 20px;
+					   }
+				}	
+
+	@media (max-width:1370px) and (min-width: 760px){
+		form#AddContactsForm.form2{
+			font-size: 13px;
+			margin-top: 2rem;
+			margin-left: 0px;
+			margin-right: 0;
+			padding-top: 50px;
+			padding-left: 0px;
+			width: 1000px;
+				}	
+	
+			span.esp {
+				margin-left: 28px;
+			}
+			
+		
+			input.formwidth1{
+				width: 500px;
+				margin-bottom: 20px;
+				   }
+		
+				   span.esp2 {
+					white-space: nowrap;
+					margin-right: 20px;
+					padding-top: 15px;
+					}
+
+
+	
+					input.formwidth2{
+						width: 190px;
+						margin-bottom: 20px;
+						margin:10px 0px 0px;
+						
+						   }
+						   
+						}	
+	
+/*@media (max-width:720px) and (min-width: 280px){
+	form#AddContactsForm.form2{
+		font-size: 13px;
+		margin-top: 2rem;
+		margin-left: 20px;
+		padding-top: 50px;
+		padding-left: 30px;
+		width: 500px;
+					}	
+								
+		span.esp {
+			margin-left: 24px;
+						}
+										
+									
+		input.formwidth1{
+			width: 200px;
+			margin-bottom: 20px;
+								   }
+									
+			span.esp2 {
+				white-space: nowrap;
+				padding-top: 15px;
+				
+								}
+
+
+		.pref4 {
+			display: flex;
+			justify-content: space-between;
+			padding-bottom: 1rem;
+			padding-top: 1rem;
+			margin:10px 0px 0px;
+			padding:0px 40px 0px 0px;
+			margin-left: 2px;
+			width: 100%;
+					   }								
+								
+				input.formwidth2{
+					width: 160px;
+					margin-bottom: 20px;
+								   }
+							}	*/							
+
+/* SMS DROPDOWN MENU*/
+
+#sidebar ul.menu-categories li.menu2 .dropdown-toggle {
+    display: flex;
+    cursor: pointer;
+    font-size: 14px;
+    color: rgba(44, 63, 52, 0.7)!important;
+    padding: 9px 10px;
+    transition: .600s;
+    border-radius: 6px;
+    font-weight: normal !important;
+}
+
+	
+.imgsiz0 {
+	width: 50px;
+	height: 50px;
+	padding-left: 10px;
+	padding-right: 10px;
+	}
+
+	.imgsiz0 :hover {
+		fill: white;
+	  }
+	  
+	  
+.imgsiz {
+	width: 20px;
+	height: 20px;
+}
+
+
+ul.menu2{
+       list-style: none;
+	   border-radius: 5px;
+		width:auto;
+	  
+}
+
+
+
+ul.menu2 li.drop0{
+    display: block;
+    position: relative;
+    float: right;
+	
+}
+
+
+li ul{
+    display: none;
+}
+
+
+ul.menu2 li a {
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 5px 15px 5px 15px;
+    margin-left: 1px;
+    white-space: nowrap;
+}
+
+
+ul.menu2 li a:hover {
+   	color: white;
+	}
+
+
+li.menu2.nav-item:hover {
+	background-color: #A7D08E;
+	padding-right: 20px;
+	padding-bottom: 10px;
+	border-radius: 6px;
+	}
+
+	li.menu2:hover ul.menu2 {
+    display: block;
+    position: relative;
+	}
+
+
+li.menu2:hover .drop0{
+    float: none;
+    font-size: 13px;
+		}
+
+li.menu2:hover a {
+    background:  #A7D08E;
+	border-radius: 6px;
+	width:auto;
+	color: white;
+}
+
+
+li.menu2 :hover .drop0 a:hover {
+	background: #0a6633;
+	border-radius: 6px;
+	width:auto;
+}
+
+/*.dropdown:hover .dropdown-menu {
+	display: block;
+	}*/
+   
+
+/*.dropdown-menu a:hover {background-color: black}*/
+/*.dropdown-menu ul li:hover {background-color: white}*/
